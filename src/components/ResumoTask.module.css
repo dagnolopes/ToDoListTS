@@ -1,0 +1,5 @@
+.resumotask {
+  background: var(--gray-500);
+  display: flex;
+  justify-content: center;
+}
