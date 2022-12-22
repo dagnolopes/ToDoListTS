@@ -1,5 +1,8 @@
 import { ChangeEvent, FormEvent, InvalidEvent, useState } from "react";
-import style from "./AddTask.module.css";
+
+import { PlusCircle } from "phosphor-react";
+
+import styles from "./AddTask.module.css";
 
 interface Task {
   id: Number;
@@ -36,21 +39,21 @@ export function AddTask({ onAddTask }: TaskProps) {
   const isNewTaskEmpty = newTaskText.length <= 0;
 
   return (
-    <form onSubmit={handleCreateNewTasck} className={style.commentForm}>
-      <strong>Deixe o seu comentário</strong>
-      <textarea
-        name="comment"
-        value={newTaskText}
-        placeholder="Deixe um comentário"
-        onChange={handleNewTaskChange}
-        onInvalid={handleNewTaskInvalid}
-        required
-      />
-      <footer>
-        <button disabled={isNewTaskEmpty} type="submit">
-          Publicar
+    <div className={styles.addtask}>
+      <form onSubmit={handleCreateNewTasck} className={styles.addtaskForm}>
+        <textarea
+          name="comment"
+          value={newTaskText}
+          placeholder="Deixe um comentário"
+          onChange={handleNewTaskChange}
+          onInvalid={handleNewTaskInvalid}
+          required
+        />
+
+        <button disabled={isNewTaskEmpty} type="submit">          
+            <p>Criar</p> {' '} <PlusCircle className={styles.pluscircle} size={20}  />          
         </button>
-      </footer>
-    </form>
+      </form>
+    </div>
   );
 }

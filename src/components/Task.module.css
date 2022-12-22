@@ -1,5 +1,53 @@
 .task {
   background: var(--gray-500);
-  display: flex;
-  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px;   
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 30px 1fr 30px; 
+  max-width: 70rem;
+}
+
+.task button {
+   cursor: pointer;
+}   
+
+.taskselecionada {
+  width: 80%;  
+  background: var(--gray-500);
+  border: 0;
+  resize: none;
+  height: 4rem; 
+   padding: 1rem;
+  border-radius: 6px;
+  color: var(--gray-100);
+  line-height: 1.6;  
+  padding-right: 2px;
+  
+}
+
+.tasknaoselecionada {
+  width: 80%;  
+  background: var(--gray-500);
+  border: 0;
+  resize: none;
+  height: 4rem; 
+   padding: 1rem;
+  border-radius: 6px;
+  color: var(--gray-100);
+  line-height: 1.6;  
+  padding-right: 2px;
+  
+}
+
+.taskselecionada p {
+  word-wrap: break-word; 
+  overflow-wrap: break-word;
+  /* width: 100%;    */
+}
+
+.tasknaoselecionada p {
+  word-wrap: break-word;    
+  overflow-wrap: break-word;
+  /* width: 100%;  */
 }

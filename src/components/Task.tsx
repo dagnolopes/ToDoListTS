@@ -1,5 +1,5 @@
-import { ThumbsUp, Trash } from "phosphor-react";
-import style from "./Task.module.css";
+import { CheckCircle, Trash } from "phosphor-react";
+import styles from "./Task.module.css";
 
 interface Task {
   id: Number;
@@ -22,18 +22,26 @@ export function Task({ task, onDeleteTask, onCheckTask }: TaskProps) {
   }
 
   return (
-    <>
-      <button onClick={handleCheckTask} title="marcar task">
-        <ThumbsUp size={24} />
-      </button>
+    <div className={styles.task}>
+      {task.regStatus === false ? (
+        <button onClick={handleCheckTask} title="marcar task">
+          <CheckCircle size={24} color="#c6c3c3" weight="fill" />
+        </button>
+      ) : (
+        <button onClick={handleCheckTask} title="marcar task">
+          <CheckCircle size={24} color="#09b315" weight="fill" />
+        </button>
+      )}
 
-      <div>{task.id.toString()}</div>
-      <div>{task.nome}</div>
-      <div>{task.regStatus ? "true" : "false"}</div>
+      {task.regStatus === false ? (
+        <div className={styles.taskselecionada}><p>{task.nome}</p> </div>
+      ) : (
+        <div className={styles.tasknaoselecionada}><p> {task.nome}</p></div>
+      )}
 
       <button onClick={handleDeleteTask} title="Deletar task">
         <Trash size={24} />
       </button>
-    </>
+    </div>
   );
 }

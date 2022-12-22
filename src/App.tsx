@@ -55,20 +55,23 @@ export function App() {
     <div>
       <Header />
       <div className={style.wrapper}>
-        <AddTask onAddTask={addTask} />
+        <header>
+          <AddTask onAddTask={addTask} />
+          <ResumoTask lisTask={lisTask} />
+        </header>
 
-        <ResumoTask lisTask={lisTask} />
-
-        {lisTask.map((element, index) => {
-          return (
-            <Task
-              key={index}
-              task={element}
-              onDeleteTask={deleteTask}
-              onCheckTask={checkTask}
-            />
-          );
-        })}
+        <main className={style.wrappermain}>
+          {lisTask.map((element, index) => {
+            return (
+              <Task
+                key={index}
+                task={element}
+                onDeleteTask={deleteTask}
+                onCheckTask={checkTask}
+              />
+            );
+          })}
+        </main>
       </div>
     </div>
   );
