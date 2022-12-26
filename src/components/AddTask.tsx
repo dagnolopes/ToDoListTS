@@ -50,8 +50,8 @@ export function AddTask({ onAddTask }: TaskProps) {
           required
         />
 
-        <button disabled={isNewTaskEmpty} type="submit">          
-            <p>Criar</p> {' '} <PlusCircle className={styles.pluscircle} size={20}  />          
+        <button disabled={isNewTaskEmpty} type="submit">
+          <p>Criar</p> <PlusCircle className={styles.pluscircle} size={20} />
         </button>
       </form>
     </div>

@@ -13,14 +13,13 @@ interface TaskProps {
   lisTask: Task[];
 }
 
-
 export function ResumoTask({ lisTask }: TaskProps) {
-
-  function concluido () {
+  function concluido() {
     const somar = lisTask.reduce((total, task) => {
-      if (task.regStatus === true) return total = total + 1 ;
-      else return total}, 0);
-    return  somar; 
+      if (task.regStatus === true) return (total = total + 1);
+      else return total;
+    }, 0);
+    return somar;
   }
 
   return (
@@ -32,7 +31,11 @@ export function ResumoTask({ lisTask }: TaskProps) {
           <span className={styles.badge}> {lisTask.length} </span>
         </div>
         <div className={styles.taskconcluidas}>
-          Concluídas <span className={styles.badge}> {lisTask.length} de {  concluido() }   </span>
+          Concluídas{" "}
+          <span className={styles.badge}>
+            {" "}
+            {lisTask.length} de {concluido()}{" "}
+          </span>
         </div>
       </div>
 

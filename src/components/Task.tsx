@@ -34,9 +34,13 @@ export function Task({ task, onDeleteTask, onCheckTask }: TaskProps) {
       )}
 
       {task.regStatus === false ? (
-        <div className={styles.taskselecionada}><p>{task.nome}</p> </div>
+        <div className={styles.taskselecionada}>
+          <p>{task.nome}</p>{" "}
+        </div>
       ) : (
-        <div className={styles.tasknaoselecionada}><p> {task.nome}</p></div>
+        <div className={styles.tasknaoselecionada}>
+          <p> {task.nome}</p>
+        </div>
       )}
 
       <button onClick={handleDeleteTask} title="Deletar task">

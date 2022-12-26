@@ -1,12 +1,12 @@
 .resumotasklimpa {
-  background: var(--gray-600);  
+  background: var(--gray-600);
   margin-top: 2rem;
-  margin: 2rem auto;  
+  margin: 2rem auto;
   display: grid;
 }
 
 .resumotasklimpa img {
-  margin: 1rem auto;  
+  margin: 1rem auto;
   height: 4rem;
 }
 
@@ -15,5 +15,3 @@
   font-size: 0.875rem;
   font-weight: bold;
 }
-
-

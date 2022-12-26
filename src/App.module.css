@@ -2,22 +2,21 @@
   background: var(--gray-600);
   max-width: 70rem;
   margin: 2rem auto;
-  padding: 0 1rem ;
+  padding: 0 1rem;
 
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  align-items: flex-start;  
+  align-items: flex-start;
 }
 
 .wrapper .wrappermain {
-  background: var(--gray-600);  
+  background: var(--gray-600);
 }
-
 
 @media (max-width: 768px) {
   html {
-    font-size: 87.5%;    
+    font-size: 87.5%;
   }
   .wrapper {
     grid-template-columns: 1fr;

@@ -22,14 +22,12 @@
   background: var(--gray-600);
   display: flex;
   align-items: center;
-  gap: 1rem; 
+  gap: 1rem;
 }
 
-.badge {  
-  background: var(--gray-300);  
+.badge {
+  background: var(--gray-300);
   color: var(--white);
-  border-radius: 8px;    
+  border-radius: 8px;
   padding: 2px 6px;
 }
-
-
